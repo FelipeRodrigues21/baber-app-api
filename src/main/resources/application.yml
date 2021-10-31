@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    show-sql: true
+    ddl-auto: validate
+  datasource:
+    platform: mariadb
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb:failover://localhost:3306/baberAppAgendamento?useTimezone=true&serverTimezone=UTC
+    username: root
+    password:
+    timeBetweenEvictionRunsMillis: 1000
+    testWhileIdle: true
+    validationQuery: SELECT 1
